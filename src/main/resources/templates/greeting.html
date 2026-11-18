@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Thymeleaf Demo</title>
+        <!-- Thymeleaf -->
+        <link rel="stylesheet" th:href="@{/webjars/bootstrap/5.3.8/css/bootstrap.min.css}">
+    </head>
+    <body>
+        <h1 th:text="'Hello, '+${username} + '!'">Hello, Guest!</h1>
+        <ul>
+            <li th:each="tech : ${items}" th:text="${tech}">Placeholder</li>
+        </ul>
+    <a th:href="@{/home}" class="btn btn-primary">Back to Home</a>
+    </body>
+</html>
