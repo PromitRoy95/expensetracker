@@ -3,10 +3,25 @@
     <head>
         <!-- Thymeleaf -->
         <link rel="stylesheet" th:href="@{/webjars/bootstrap/5.3.8/css/bootstrap.min.css}">
+        <style>
+            .content {
+                margin-left: 250px;
+                padding: 2rem;
+            }
+        </style>
     </head>
     <body>
-        <h2>My spring boot application</h2>
-        <p>Some text here</p>
-        <a th:href="@{/greeting}" class="btn btn-primary">Greeting</a>
+        <!-- <nav class="sidebar position-fixed top-0 start-0 vh-100 bg-dark">
+            <div class="nav flex-column">
+                <a class="nav-link text-white" href="#">Dashboard</a>
+                <a class="nav-link text-white" href="#">View Expenses</a>
+            </div>
+        </nav> -->
+        <div th:insert="~{fragments/navbar :: navbar}"></div>
+        <div class="content">
+            <h2>Dashboard</h2>
+            <p>Some insights into your monthly expenditures</p>
+            <a th:href="@{/greeting}" class="btn btn-primary">Greeting</a>
+        </div>
     </body>
 </html>

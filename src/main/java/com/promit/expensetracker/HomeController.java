@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller 
 public class HomeController {
-    @GetMapping("/home")
+    @GetMapping({"/","/home"})
     public String homePage(Model model) {
         // Optional: Pass dynamic data to the HTML page
         model.addAttribute("pageTitle", "Welcome to Spring Boot");

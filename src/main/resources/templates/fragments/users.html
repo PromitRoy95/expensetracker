@@ -1,0 +1,7 @@
+<div th:fragment="userList">
+    <ul>
+        <li th:each="user : ${users}"
+            th:text="${user.name}">
+        </li>
+    </ul>
+</div>
