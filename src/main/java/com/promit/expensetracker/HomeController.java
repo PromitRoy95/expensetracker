@@ -17,10 +17,10 @@ public class HomeController {
         return "home"; 
     }
 
-    @GetMapping("/greeting")
+    @GetMapping("/expenses")
     public String greeting(Model model) {
         model.addAttribute("username", "Alex");
         model.addAttribute("items", List.of("Java", "Spring Boot", "Thymeleaf"));
-        return "greeting"; // Resolves to templates/greeting.html
+        return "expenses"; // Resolves to templates/greeting.html
     }
 }

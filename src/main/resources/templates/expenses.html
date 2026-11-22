@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Thymeleaf Demo</title>
+        <!-- Thymeleaf -->
+        <link rel="stylesheet" th:href="@{/webjars/bootstrap/5.3.8/css/bootstrap.min.css}">
+        <style>
+            .content {
+                margin-left: 250px;
+                padding: 2rem;
+            }
+        </style>
+    </head>
+    <body>
+        <div th:insert="~{fragments/navbar :: navbar}"></div>
+        <div class="content">
+            <h1>My expenditures</h1>
+
+            <table class="table table-striped">
+                <th>
+                    Amount
+                </th>
+                <th>
+                    Category
+                </th>
+                <tr>
+                    <td>1230</td>
+                    <td>FOOD</td>
+                </tr>
+                <tr>
+                    <td>234</td>
+                    <td>RENT</td>
+                </tr>
+                <tr>
+                    <td>200</td>
+                    <td>Phone recharge</td>
+                </tr>
+                <tr>
+                    <td>235</td>
+                    <td>FOOD</td>
+                </tr>
+                <tr>
+                    <td>1000</td>
+                    <td>MOVIE TICKET</td>
+                </tr>
+            </table>
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                </ul>
+            </nav>
+            <table class="table">
+                <tr>
+                    <td>
+                        <label>From</label>
+                        <input type="date" id="from" name="from">
+                    </td>
+                    <td>
+
+                    </td>
+                    <td>
+                        <label>To</label>
+                        <input type="date" id="to" name="to">
+                    </td>
+                </tr>
+            </table>
+            <button class="btn btn-primary">Go</a>
+        </div>  
+    </body>
+</html>
